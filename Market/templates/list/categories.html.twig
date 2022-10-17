@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Категории{% endblock %}
+
+{% block body %}
+  <ul class="list-group">
+  {% for category in categories %}
+    <li class="list-group-item"><a href="{{ path('inCategory', { 'category': category.id }) }}" class="nav-link">{{ category.name }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
